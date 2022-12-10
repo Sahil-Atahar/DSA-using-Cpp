@@ -6,7 +6,7 @@ using namespace std;
 int main()
 {
     int num[10] = {1, 2, 5, 3, 6, 7, 8, 9, 6, 3};
-    int target = 180;
+    int target = 10;
     bool found = false;
 
     for (int i = 0; i < sizeof(num) / sizeof(int); i++)
