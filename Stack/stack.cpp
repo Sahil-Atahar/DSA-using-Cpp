@@ -10,8 +10,8 @@ int stack[10];
 int maxSize = sizeof(stack)/sizeof(int);
 
 void displayStack();
-void insertItemInStack();
-void deleteElementFromStack();
+void push();
+void pop();
 
 int main()
 {
@@ -28,10 +28,10 @@ inputAgain:
     switch (input)
     {
     case 1:
-        insertItemInStack();
+        push();
         break;
     case 2:
-        deleteElementFromStack();
+        pop();
         break;
     case 3:
         exit(0);
@@ -67,7 +67,7 @@ void displayStack()
 }
 
 //* Inserting Element into Stack
-void insertItemInStack()
+void push()
 {
     if (top != maxSize - 1)
     {
@@ -79,7 +79,7 @@ void insertItemInStack()
 }
 
 //! Deleting Stack Element
-void deleteElementFromStack()
+void pop()
 {
     top--;
     displayStack();

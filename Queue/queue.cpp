@@ -9,8 +9,8 @@ int rear = -1;
 int queue[10];
 int maxSize = sizeof(queue) / sizeof(int);
 
-void insertItem();
-void deleteItem();
+void push();
+void pop();
 void display();
 
 int main()
@@ -27,16 +27,16 @@ takeInputAgain:
     switch (input)
     {
     case 1:
-        insertItem();
+        push();
         break;
     case 2:
-        deleteItem();
+        pop();
         break;
     case 3:
         exit(0);
         break;
     default:
-        cout << "Wrong Input, Enter correct input : ";
+        cout << "Wrong Input, Enter valid input : ";
         goto takeInputAgain;
     }
     getch();
@@ -68,7 +68,7 @@ void display()
     main();
 }
 
-void insertItem()
+void push()
 {
     if (rear + 1 == maxSize)
     {
@@ -84,7 +84,7 @@ void insertItem()
     display();
 }
 
-void deleteItem()
+void pop()
 {
     if (front < rear)
         front++;
